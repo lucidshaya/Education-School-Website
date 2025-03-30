@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CSS */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --accent-color: #22c55e;
+  --dark-blue: #1e3a8a;
+  --light-bg: #f0f4ff;
+  --text-dark: #1f2937;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 8vw;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation ul li {
+  list-style: none;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navigation ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navigation ul li a:hover::after {
+  width: 100%;
+}
+
+.navigation ul li a.active {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(59, 130, 246, 0.9)),
+              url('images/teacher talking.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 3rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+  background: #16a34a;
+}
+
+.cta-button i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+      padding: 6rem 1rem 2rem;
+  }
+  
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+  
+  .lead {
+      font-size: 1.25rem;
+  }
+  
+  .description {
+      font-size: 1rem;
+  }
+  
+  .navigation ul {
+      gap: 1rem;
+  }
+  
+  .logo {
+      width: 100px;
+  }
+  
+  .cta-button {
+      padding: 1rem 2rem;
+  }
+}

@@ -1,0 +1,228 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #22c55e;
+    --dark-blue: #1e3a8a;
+    --light-bg: #f0f4ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--light-bg);
+}
+
+/* Adjusted Navbar Size */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 8vw; /* Increased padding for a larger navbar */
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 60px; /* Set navbar height to 60px */
+}
+
+.logo {
+    width: 60px; /* Adjusted logo size to match the navbar height */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navigation ul {
+    display: flex;
+    gap: 2rem; /* Adjusted gap between navigation items */
+}
+
+.navigation ul li {
+    list-style: none;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 600;
+    position: relative;
+    font-size: 1rem; /* Adjusted font size for navigation links */
+    padding: 0.5rem 0; /* Increased padding for links */
+    transition: color 0.3s ease;
+}
+
+.navigation ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navigation ul li a:hover::after {
+    width: 100%;
+}
+
+.navigation ul li a.active {
+    color: var(--primary-color);
+}
+
+#hero {
+    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(59, 130, 246, 0.9)),
+                url('images/graduating\ students\ 4.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 2rem;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.cta-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button i {
+    font-size: 1.25rem;
+}
+
+.cta-button.phone {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button.phone:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.whatsapp {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.cta-button.whatsapp:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+}
+
+#socials {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+}
+
+#socials h2 {
+    color: var(--dark-blue);
+    margin-bottom: 2.5rem;
+    font-size: 2.25rem;
+}
+
+social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-button {
+    padding: 1.5rem 2.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: 500;
+}
+
+.social-button i {
+    font-size: 1.5rem;
+}
+
+.social-button.facebook {
+    background: #1877f2;
+}
+
+.social-button.twitter {
+    background: #1da1f2;
+}
+
+.social-button.instagram {
+    background: linear-gradient(45deg, #405de6, #e1306c, #ffdc80);
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .navigation ul {
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 40px; /* Adjusted logo size for smaller screens */
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+    }
+}
