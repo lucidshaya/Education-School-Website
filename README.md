@@ -1,7 +1,7 @@
 # SchoolEdu - Educational School Website
 
-[Download Screenshot](https://github.com/yourusername/repo/raw/main/Screenshot%20(55).png)
-*A modern platform for students, teachers, and administrators.*
+Deploy : https://67e87d8e626da27d7b468a48--resilient-lamington-4f8595.netlify.app/
+*A modern platform for students and teachers*
 
 ## 📌 Overview
 SchoolEdu is a responsive website designed to streamline school operations, including:
