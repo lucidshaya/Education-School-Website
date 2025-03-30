@@ -1,6 +1,6 @@
 # SchoolEdu - Educational School Website
 
-![SchoolEdu Logo](https://via.placeholder.com/150x50?text=SchoolEdu)  
+[Download Screenshot](https://github.com/yourusername/repo/raw/main/Screenshot%20(55).png)
 *A modern platform for students, teachers, and administrators.*
 
 ## 📌 Overview
